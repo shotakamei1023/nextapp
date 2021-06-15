@@ -1,0 +1,15 @@
+.box {
+  width: 240px;
+  padding: 16px 24px;
+  color: white;
+  background-color: darkslategrey;
+  border-radius: 4px;
+}
+
+.heading {
+  margin: 0;
+}
+
+.message {
+  margin: 16px 0 0;
+}

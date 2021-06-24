@@ -1,20 +1,22 @@
 import Link from "next/link";
-
+import "../styles/global.css";
+// CSS Modulesの読み込みを追加
+import styles from "../styles/App.module.css";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <div>
+    <div className={styles.wrapper}>
 
       {/* Container */}
-      <div>
+      <div className={styles.container}>
 
         {/* Header */}
-        <header>
+        <header className={styles.header}>
           <h1>My Website</h1>
         </header>
 
         {/* Nav */}
-        <nav>
+        <nav className={styles.nav}>
           <ul>
             <li>
               <Link href="/">Home</Link>
@@ -26,17 +28,18 @@ const MyApp = ({ Component, pageProps }) => {
         </nav>
 
         {/* Main */}
-        <main>
+        <main className={styles.main}>
           <Component {...pageProps} />
         </main>
       </div>
 
       {/* Footer */}
-      <footer>
-        <div>
+      <footer className={styles.footer}>
+        <div className={styles.inner}>
           Powered by <a href="https://nextjs.org/">Next.js</a>
         </div>
       </footer>
+
     </div>
   );
 };
